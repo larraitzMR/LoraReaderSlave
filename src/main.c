@@ -235,8 +235,8 @@
 							recibidoSlave = 1;
 							DelayMs(1);
 						}
-						else if ((recibidoSlave == 1) && (strncmp((const char*) Buffer,(const char*) "GPS", 3) == 0)) {
-							PRINTF("%s\r\n", Buffer);
+						else if (recibidoSlave == 1) {
+							//PRINTF("%s\r\n", Buffer);
 							sprintf(OK_ID, "%s%d", OKMsg, ID);
 							Radio.Send(OK_ID, 3);
 							DelayMs(1);
